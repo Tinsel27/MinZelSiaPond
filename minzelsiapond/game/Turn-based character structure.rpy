@@ -1,5 +1,5 @@
 init python:
-    class actor:
+    class Actor:
         def __init__(self, id, name, hp, max_hp, atk, is_player=True):
             self.id=id
             self.name=name
