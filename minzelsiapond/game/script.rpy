@@ -42,7 +42,7 @@ define shortfade = Fade(0.2, 0.0, 0.2)
 #Fade for changing bg scene
 
 label start:
-
+    jump battle_start
     scene LuxRoom
 
     n "In the silence of the night when the world falls asleep, There's a young hard working girl alone in her workshop working tirelessly on something that resembles an engine of some sort."

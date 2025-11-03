@@ -1,9 +1,8 @@
-default player_obj = Actor("Hero", 100, 25)
-default enemy_obj = Actor("Goblin", 80, 15)
 
 label battle_start:
+    default player_obj = Actor("Hero", 100, 25)
+    default enemy_obj = Actor("Goblin", 80, 15)
     python:
-        # รีเซ็ตสถานะ
         player_obj.hp = player_obj.max_hp
         player_obj.is_dead = False
         player_obj.is_defend = False
