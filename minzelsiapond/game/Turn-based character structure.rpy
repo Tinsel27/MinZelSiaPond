@@ -1,17 +1,25 @@
 init python:
     class Actor:
-        def __init__(self, id, name, hp, max_hp, atk, is_player=True):
-            self.id=id
-            self.name=name
-            self.hp=hp
-            self.max_hp=max_hp
-            self.atk=atk
-            self.is_player=is_player
-            self.isdie=False
-        def take_damage(self, damage):
-            self.hp -= damage
+        def __init__(self, name,hp, atk):
+            self.name = name
+            self.max_hp = hp
+            self.hp = hp
+            self.atk = atk
+            self.is_dead = False
+            self.is_defend = False
+
+        def take_damage(self, dmg):
+            if self.is_defend:
+                dmg = int(dmg * 0.5)
+                self.is_defend = False
+            self.hp = max(0, self.hp - dmg)
             if self.hp <= 0:
-                self.hp = 0
                 self.is_dead = True
-                return f"{self.name} die"
-            return f"{self.name} take {damage} damage"
+                return f"{self.name} ถูกโจมตีและพ่ายแพ้!"
+            return f"{self.name} ถูกโจมตีเสียหาย {dmg} หน่วย!"
+
+        def heal(self):
+            heal_amount = int(self.max_hp * 0.3)
+            self.hp = min(self.max_hp, self.hp + heal_amount)
+            return f"{self.name} ฟื้นฟู {heal_amount} HP!"
+

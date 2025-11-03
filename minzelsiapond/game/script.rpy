@@ -42,7 +42,6 @@ define shortfade = Fade(0.2, 0.0, 0.2)
 #Fade for changing bg scene
 
 label start:
-    # Start of prologue
 
     scene LuxRoom
 
