@@ -1,5 +1,5 @@
 ﻿# The script of the game goes in this file.
-
+#ggg
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 #define to create character to speak
@@ -30,6 +30,7 @@ image Leona_laughIN = "images/characters/Leona_laugh_In.png"
 image Leona_awaken = "images/characters/Leona_awaken.png"
 image Leona_awakenIN = "images/characters/Leona_awaken_In.png"
 image TBD = "images/TBD.jpg"
+image black="images/bg/nig__.jpg"
 # The game starts here.
 #show use to show character sprite
 #hide to hide png or char
@@ -58,7 +59,7 @@ define shortfade = Fade(0.2, 0.0, 0.2)
 #Fade for changing bg scene
 
 label start:
-    scene LuxRoom
+    scene black
 
     n "In the silence of the night when the world falls asleep, There's a young hard working girl alone in her workshop working tirelessly on something that resembles an engine of some sort."
 
@@ -67,6 +68,8 @@ label start:
     u "“wa…ke …up”"
 
     n "the voice said, but before she had time to react..."
+
+    scene LuxRoom
 
     n "She woke up in a cold sweat."
     
