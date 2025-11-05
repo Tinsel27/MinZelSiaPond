@@ -426,10 +426,11 @@ label start:
     hide Leona_normal
 
     #*Start Tutorial Fight*
+    call battle_dummy
     #*End Tutorial Fight*
 
     n "After passing a training program Luxure and Leona get onto the train and go rest in their own room."
-
+    scene LuxRoom
     n "The next moring…"
 
     show Luxure_normal at luxure_left
@@ -498,6 +499,7 @@ label start:
     hide Luxure_normalIN
     hide Boss_annoyed
     #*First Fight Start*
+    call battle_2
     #*First Fight End*
 
     show Luxure_normal at luxure_left
