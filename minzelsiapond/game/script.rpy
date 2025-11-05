@@ -2,7 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
+#define to create character to speak
 define e = Character("Luxure")
 define n = Character("Narrator")
 define b = Character("Custos")
