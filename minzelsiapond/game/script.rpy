@@ -9,7 +9,7 @@ define b = Character("Custos")
 define u = Character("???")
 define l = Character("Leona")
 #IN = INACTIVE
-image LuxRoom = "images/LuxRoom.png"
+image LuxRoom = "images/Lux_Room.png"
 image Control_Panel = "images/Control_Panel.png"
 image Luxure_normal = "images/characters/Lux_Neutral.png"
 image Luxure_normalIN = "images/characters/Lux_Neutral_In.png"
@@ -29,8 +29,10 @@ image Leona_laugh = "images/characters/Leona_laugh.png"
 image Leona_laughIN = "images/characters/Leona_laugh_In.png"
 image Leona_awaken = "images/characters/Leona_awaken.png"
 image Leona_awakenIN = "images/characters/Leona_awaken_In.png"
-image TBD = "images/TBD.jpg"
-image black="images/bg/nig__.jpg"
+image black="images/Black.jpg"
+image Town="images/Vincicity.png"
+image Leona_House="images/Davici_House.png"
+image Leonaroom= "images/Davinci_Room.png"
 # The game starts here.
 #show use to show character sprite
 #hide to hide png or char
@@ -200,7 +202,7 @@ label start:
     
     hide Luxure_normal
 
-    scene TBD with fade
+    scene Town with fade
     show Luxure_normalIN at luxure_left
 
     n "After a really long amount of time filled by the voice of Luxure and the boss arguing they finally arrive at what looks like an old run down workshop that hasn't had anyone there for decades."
@@ -211,6 +213,8 @@ label start:
     e "“Are we in the 1400s?” Luxure asked while walking out of the train and putting an earpiece on."
 
     b "“That right, and your new crew is in that building ahead” the boss answered through that earpiece."
+
+    scene Leona_House
 
     n "Luxure slowly walks up to the building ignoring any and everybody giving her weird looks as she walks by. She knocks on the door of the building before she starts fiddling around with the plant outside the building."
     
@@ -256,9 +260,12 @@ label start:
     # — end of prologue —
     #chapter start image will be added in future
     #start of Chapter 1
+    
+    scene black
 
     n "sometime after picking up leona..."
 
+    scene LuxRoom
     show Luxure_normal at luxure_left
 
     e "I wonder how she’s doing right now."
@@ -270,6 +277,7 @@ label start:
 
     n "Luxure starts walking toward the guest room on the train and knocks on the door."
 
+    scene Leonaroom
     hide Luxure_normalIN
     show Luxure_normal at luxure_left
 
@@ -384,7 +392,8 @@ label start:
     show Leona_normalIN at Leona_right
 
     n "The two start walking toward the control room while chatting along the way…"
-
+    
+    scene Control_Panel
     hide Luxure_normalIN
     hide Leona_normalIN
     show Luxure_normal at luxure_left
@@ -530,6 +539,7 @@ label start:
 
     n "After the Operation ended Luxure and Leona chatted while heading back to the train."
 
+    n "- thak you for playing -"
     # This ends the game.
 
     return
